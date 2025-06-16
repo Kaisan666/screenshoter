@@ -1,0 +1,43 @@
+/* ================================ Fonts ================================ */
+@import './fonts.scss';
+
+/* ================================ Animations ================================ */
+@import './_animations/**/*.scss';
+
+/* ================================ Styles ================================ */
+@import './_styles/*.scss';
+
+/* ================================ Reset ================================ */
+@import './reset.scss';
+
+/* ================================ Base ================================ */
+@import './-base/**/*.scss';
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: 16px;
+  font-family: 'Rubik', sans-serif;
+}
+
+.container {
+  max-width: calc(1440px + 40px * 2);
+  margin: 0 auto;
+  padding: 0 40px;
+  @mixin mobile {
+    max-width: calc(1440px + 20px * 2);
+    padding: 0 20px;
+  }
+}
+
+.accent-text{
+    
+}
+
+.blured {
+  backdrop-filter: blur(40px);
+  background: rgba(196, 196, 196, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+}
