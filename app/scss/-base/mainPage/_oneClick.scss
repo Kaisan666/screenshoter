@@ -1,16 +1,160 @@
-.one-click{
-    &__content{
-        display: flex;
-        justify-content: space-between;
-        gap: 70px;
+.one-click {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: clamp(30px, 4.02vw, 77px);
+    position: relative;
+    &::before {
+      content: url('/assets/images/oneClick/DecorativeLine.png');
+      position: absolute;
+      z-index: -1;
+      top: -157px;
+      left: -12vw;
     }
-    &__left{
-        flex: 1 1 550px;
+    &::after {
+      content: ' ';
+      position: absolute;
+      width: 55%;
+      height: 166.5%;
+      max-height: 740px;
+      background: linear-gradient(to bottom, $gradient);
+      border-radius: 70px;
+      top: -21%;
+      right: -20%;
+      z-index: -2;
     }
-    &__right{
-        flex: 1 1 848px;
-        transform: translateX(75px);
+  }
+  &__left {
+    flex: 1 1 550px;
+  }
+  &__right {
+    flex: 0 1 848px;
+    transform: translateX(133px);
+    margin-right: 67px;
+  }
+  &__img {
+    position: relative;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    .accent-text {
+      position: relative;
+      &__background {
+        position: absolute;
+        top: 0;
+        left: -5px;
+      }
     }
-    margin-top: 163px;
+  }
+  &__description {
+    margin-top: 40px;
+    margin-bottom: 80px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 200%;
+    color: $mainGray;
+  }
+  &__download {
+  }
+  &__annotation {
+    width: max-content;
+    position: absolute;
+    top: 90%;
+    color: $white;
+    line-height: 160%;
+    padding: 28px 52px;
+    left: 45%;
+    backdrop-filter: blur(16px);
+  }
+  margin-top: 163px;
+  margin-bottom: 463px;
 
+  @include table {
+    margin-top: 88px;
+    &__content {
+      &::before {
+        top: -350px;
+        left: -76vw;
+      }
+      &::after {
+        width: 400px;
+        height: 385px;
+        border-radius: 35px;
+        right: -17%;
+      }
+    }
+    &__title {
+      font-size: 24px;
+    }
+
+    &__left {
+      flex: 1 1 265px;
+    }
+
+    &__right {
+      flex: 1 1 368px;
+      transform: none;
+      margin: 0;
+    }
+    &__description {
+      font-size: 12px;
+      line-height: 180%;
+      margin-top: 22px;
+      margin-bottom: 30px;
+    }
+
+    &__annotation {
+      font-size: 12px;
+      padding: 15px 22px;
+    }
+    &__download {
+      font-size: 12px;
+    }
+    .accent-text {
+      &__background {
+        left: -2.5px;
+        svg {
+          width: 102px;
+          height: 27px;
+        }
+      }
+    }
+  }
+  @include mobile {
+    margin-top: 50px;
+    &__content {
+      flex-direction: column-reverse;
+      gap: 126px;
+
+      &::after {
+        height: 70vw;
+        width: 90vw;
+        top: -4%;
+      }
+    }
+
+    &__title {
+      text-align: center;
+    }
+    &__description {
+      text-align: center;
+      margin: 0;
+    }
+
+    &__left {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
+    }
+    &__right {
+      flex: 1 1 auto;
+    }
+    &__annotation{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+  }
 }

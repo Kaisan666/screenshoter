@@ -1,15 +1,18 @@
 mixin oneClick 
-    section.one-click 
-        .container 
+    section.one-click
+        .container
             .one-click__content
                 .one-click__left 
-                    h1.one-click__title Делайте снимки и записывайте экран
+                    h1.one-click__title Делайте снимки и записывайте экран <br>
                         span.accent-text в 1 клик 
+                            .accent-text__background
+                                svg(width="212" height="57")
+                                    use(xlink:href="/assets/icons/sprite.svg#accentBG")
                     .one-click__description Вместе со Screenshoter можно в один клик сделать снимок или записать происходящее на экране ПК,  чтобы поделиться с кем угодно
-                    a(href="").one-click__download Скачать бесплатно
+                    a(href="#").one-click__download.download-btn.download-btn--violet Скачать бесплатно
                 .one-click__right
                     .one-click__img 
-                        img(src="/assets/images/oneClick/screenshot.png", alt="")
-                    .one-click__annotation.blured
-                        .one-click__annotation-text
+                        img(src="/assets/images/oneClick/screenshot.png", alt="Скриншот экрана")
+                        .one-click__annotation.blured
+                            .one-click__annotation-text Бесплатная программа <br> для Windows
             

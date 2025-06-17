@@ -1,18 +1,5 @@
 /* ================================ Fonts ================================ */
-@import './fonts.scss';
-
-/* ================================ Animations ================================ */
-@import './_animations/**/*.scss';
-
-/* ================================ Styles ================================ */
 @import './_styles/*.scss';
-
-/* ================================ Reset ================================ */
-@import './reset.scss';
-
-/* ================================ Base ================================ */
-@import './-base/**/*.scss';
-
 body {
   display: flex;
   flex-direction: column;
@@ -20,19 +7,22 @@ body {
   font-size: 16px;
   font-family: 'Rubik', sans-serif;
 }
+.wrapper{
+  overflow-x: hidden;
+}
 
 .container {
-  max-width: calc(1440px + 40px * 2);
+  max-width: calc(1447px + 45px * 2);
   margin: 0 auto;
-  padding: 0 40px;
-  @mixin mobile {
-    max-width: calc(1440px + 20px * 2);
-    padding: 0 20px;
+  padding: 0 45px;
+  @include mobile {
+    max-width: calc(1440px + 15px * 2);
+    padding: 0 15px;
   }
 }
 
 .accent-text{
-    
+color: $violet;
 }
 
 .blured {
@@ -41,3 +31,33 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 10px;
 }
+
+.download-btn{
+  font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+color: $white;
+padding: 23px 41px;
+border-radius: 5px;
+  &--violet{
+    background: linear-gradient(to right, $gradient);
+  }
+
+  @include table{
+    padding: 13px 27px;
+  }
+}
+
+@import './fonts.scss';
+
+/* ================================ Animations ================================ */
+@import './_animations/**/*.scss';
+
+/* ================================ Styles ================================ */
+
+
+/* ================================ Reset ================================ */
+@import './reset.scss';
+
+/* ================================ Base ================================ */
+@import './-base/**/*.scss';
