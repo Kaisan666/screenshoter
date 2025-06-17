@@ -15,25 +15,50 @@
       line-height: 200%;
     }
   }
-  &__cards {
-    display: flex;
-    gap: 29px;
-    justify-content: space-between;
+  &__functions {
+
+    &-content {
+      display: flex;
+      gap: 29px;
+      justify-content: space-between;
+      margin-bottom: 390px;
+      margin-top: 80px;
+    }
+
+    &-card {
+      padding: 50px 60px 60px;
+    }
   }
-  &__card{
-    padding: 50px 60px 60px;
+  &__benefit {
+
+    &-card {
+      padding: 60px 45px 44px;
+    }
+
+    &-content {
+      display: flex;
+      gap: 29px;
+      justify-content: space-between;
+      margin-bottom: 90px;
+    }
+  }
+
+  &__info-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 300px;
   }
 }
 
 .promote-card {
-    max-width: 338px;
-    box-shadow: 0 18px 45px -10px rgba(0, 0, 0, 0.13);
-  
+  max-width: 338px;
+  flex: 1 1 338px;
+  box-shadow: 0 18px 45px -10px rgba(0, 0, 0, 0.13);
   display: flex;
   flex-direction: column;
   gap: 40px;
   background-color: $white;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   border-radius: 10px;
 
   &__title {
@@ -44,14 +69,116 @@
     transition: all 0.3s ease-in-out;
   }
 
-  @media (hover : hover) and (pointer : fine){
-    &:hover{
-        background-color: $violet;
-        transition: all 0.3s ease-in-out;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: $violet;
+      transition: all 0.3s ease-in-out;
     }
-    &:hover &__title{
-        color: $white;
-        transition: all 0.3s ease-in-out;
+    &:hover &__title {
+      color: $white;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+.info-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  &__info {
+    flex: 0 1 470px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    &-title {
+      font-weight: 700;
+      font-size: 36px;
+    }
+    &-description {
+      font-size: 18px;
+      line-height: 180%;
+    }
+  }
+  &__annotation {
+    position: absolute;
+    max-width: 461px;
+  }
+
+  &--reversed {
+    flex-direction: row-reverse;
+  }
+
+  &:nth-child(1) {
+    &::after {
+      content: ' ';
+      width: 300px;
+      height: 300px;
+      background-color: red;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &::before {
+      content: url('/assets/images/twoInOne/recordDonut.png');
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+  }
+  &:nth-child(2) {
+    &::after {
+      content: ' ';
+      width: 300px;
+      height: 300px;
+      background-color: red;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    &::before {
+      content: url('/assets/images/twoInOne/oneClickCube.png');
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+    }
+  }
+  &:nth-child(3) {
+    &::after {
+      content: ' ';
+      width: 300px;
+      height: 300px;
+      background-color: red;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    &::before {
+      content: url('/assets/images/twoInOne/instantLink.png');
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+    }
+  }
+  &:nth-child(4) {
+    &::after {
+      content: ' ';
+      width: 300px;
+      height: 300px;
+      background-color: red;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    &::before {
+      content: url('/assets/images/twoInOne/editorDonut.png');
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
     }
   }
 }
