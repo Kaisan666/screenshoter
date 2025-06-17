@@ -1,98 +1,104 @@
 mixin twoInOne
-    section.two-in-one.container
-        .two-in-one__header 
-            h2.two-in-one__header-title
-                span.accent-text
-            .two-in-one__header-description
-        .two-in-one__cards 
-            .two-in-one__card.promote-card 
-                .promote-card__img
-                    svg()
-                        use()
-                h3.promote-card__title Снимок и запись экрана в 1 клик
-            .two-in-one__card.promote-card 
-                .promote-card__img
-                    svg()
-                        use()
-                h3.promote-card__title Моментальная ссылка на файл
-            .two-in-one__card.promote-card 
-                .promote-card__img
-                    svg()
-                        use()
-                h3.promote-card__title Удобный редактор снимков
-            .two-in-one__card.promote-card 
-                .promote-card__img
-                    svg()
-                        use()
-                h3.promote-card__title Бесплатно и без регистрации
+    section.two-in-one
+        .container
+            .two-in-one__header 
+                h2.two-in-one__header-title Встречайте&nbsp—&nbspскриншоты <br> и запись экрана 
+                    span.accent-text 2 в 1
+                .two-in-one__header-description Больше не нужно искать две отдельные программы для скриншотов и записи экрана. Screenshoter поможет сделать 
+                    b снимок экрана, записать видео и поделиться 
+                    | им 
+                    b с кем угодно
+                    | . 
+                    | Можно выделить весь экран, определенную область или активное окно
+            .two-in-one__cards 
+                a(href="#oneClick").two-in-one__card.promote-card 
+                    .promote-card__img
+                        svg(width="80" height="80")
+                            use(xlink:href="/assets/icons/sprite.svg#cursor")
+                    h3.promote-card__title Снимок и запись экрана в 1 клик
+                a(href="#instantLink").two-in-one__card.promote-card 
+                    .promote-card__img
+                        svg(width="80" height="80")
+                            use(xlink:href="/assets/icons/sprite.svg#save")
+                    h3.promote-card__title Моментальная ссылка на файл
+                a(href="#editor").two-in-one__card.promote-card 
+                    .promote-card__img
+                        svg(width="80" height="80")
+                            use(xlink:href="/assets/icons/sprite.svg#puzzle")
+                    h3.promote-card__title Удобный редактор снимков
+                a(href="#free").two-in-one__card.promote-card 
+                    .promote-card__img
+                        svg(width="80" height="80")
+                            use(xlink:href="/assets/icons/sprite.svg#heart")
+                    h3.promote-card__title Бесплатно и без регистрации
 
-                
-        article.two-in-one__record.info-block 
-            .info-block__img
-                .info-block__img-wrapper
-                    img(src="", alt="")
-            .info-block__info
-                h2.info-block__info-title Запись экрана
-                .info-block__info-description Недостаточно снимков? Запишите происходящее на экране со своим голосом или звуком системы. <br>
-                    span.accent-text Достаточно нажать две кнопки мыши,
-                    | выделить необходимую область и начнется запись видео с экрана. Быстро и без сложных настроек   
-        
-        article.two-in-one__one-click.info-block 
-            .info-block__img
-                .info-block__img-wrapper
-                    img(src="", alt="")
-            .info-block__info
-                h2.info-block__info-title В один клик
-                .info-block__info-description
-                    span.accent-text Не нужно запоминать комбинации клавиш
-                    |  на клавиатуре, чтобы сделать скриншот или начать записывать видео с экрана. <br>
-                    |  Просто нажмите две кнопки мыши или настройте горячую кнопку на любую удобную клавишу 
-        
-        article.two-in-one__instant-link.info-block 
-            .info-block__img
-                .info-block__img-wrapper
-                    img(src="", alt="")
-            .info-block__info
-                h2.info-block__info-title Мгновенная ссылка
-                .info-block__info-description Мгновенное получение ссылки на снимок
-                    | или видео. Вы только нажали Enter, а ссылка уже
-                    | в буфере обмена. Перейдя по ссылке, можно будет посмотреть ваш снимок или записанное видео
-            .info-block__annotation.blured
-                .info-block__annotation-text
-                    span.info-block__annotation-accent Файлы хранятся в течение 1 года
-                    | с момента создания. Можно их удалять самостоятельно. В истории программы доступны последние 5 скриншотов
+                    
+            article.two-in-one__record.info-block(id="oneClick")
+                .info-block__img
+                    .info-block__img-wrapper
+                        img(src="", alt="")
+                .info-block__info
+                    h2.info-block__info-title Запись экрана
+                    .info-block__info-description Недостаточно снимков? Запишите происходящее на экране со своим голосом или звуком системы. <br>
+                        span.accent-text Достаточно нажать две кнопки мыши,
+                        | выделить необходимую область и начнется запись видео с экрана. Быстро и без сложных настроек   
+            
+            article.two-in-one__one-click.info-block 
+                .info-block__img
+                    .info-block__img-wrapper
+                        img(src="", alt="")
+                .info-block__info
+                    h2.info-block__info-title В один клик
+                    .info-block__info-description
+                        span.accent-text Не нужно запоминать комбинации клавиш
+                        |  на клавиатуре, чтобы сделать скриншот или начать записывать видео с экрана. <br>
+                        |  Просто нажмите две кнопки мыши или настройте горячую кнопку на любую удобную клавишу 
+            
+            article.two-in-one__instant-link.info-block(id="instantLink")
+                .info-block__img
+                    .info-block__img-wrapper
+                        img(src="", alt="")
+                .info-block__info
+                    h2.info-block__info-title Мгновенная ссылка
+                    .info-block__info-description Мгновенное получение ссылки на снимок
+                        | или видео. Вы только нажали Enter, а ссылка уже
+                        | в буфере обмена. Перейдя по ссылке, можно будет посмотреть ваш снимок или записанное видео
+                .info-block__annotation.blured
+                    .info-block__annotation-text
+                        span.info-block__annotation-accent Файлы хранятся в течение 1 года
+                        | с момента создания. Можно их удалять самостоятельно. В истории программы доступны последние 5 скриншотов
 
-        article.two-in-one__editor.info-block 
-            .info-block__img
-                .info-block__img-wrapper
-                    img(src="", alt="")
-            .info-block__info
-                h2.info-block__info-title И редактор снимков
-                .info-block__info-description
-                    span.accent-text Более 5 инструментов
-                    |  для редактирования. Выделяете область и редактируете. <br>
-                    |  Если неверно выбрали область — не беда, можно без проблем её передвинуть и/или изменить размер, не удаляя то, что уже нарисовано!
+            article.two-in-one__editor.info-block(id="editor")
+                .info-block__img
+                    .info-block__img-wrapper
+                        img(src="", alt="")
+                .info-block__info
+                    h2.info-block__info-title И редактор снимков
+                    .info-block__info-description
+                        span.accent-text Более 5 инструментов
+                        |  для редактирования. Выделяете область и редактируете. <br>
+                        |  Если неверно выбрали область — не беда, можно без проблем её передвинуть и/или изменить размер, не удаляя то, что уже нарисовано!
 
-        article.two-in-one__cards 
-            .two-in-one__card.promote-card 
-                .promote-card__img
-                    svg()
-                        use()
-                h3.promote-card__title Выбирайте цвет и рисуйте карандашом
-            .two-in-one__card.promote-card 
-                .promote-card__img
-                    svg()
-                        use()
-                h3.promote-card__title Используйте стрелку, круг или квадрат для выделения
-            .two-in-one__card.promote-card 
-                .promote-card__img
-                    svg()
-                        use()
-                h3.promote-card__title Оставляйте комментарии
-            .two-in-one__card.promote-card 
-                .promote-card__img
-                    svg()
-                        use()
-                h3.promote-card__title Размывайте необходимую область
-        a(href="").two-in-one__download Скачать беслатно
+            article.two-in-one__cards(id="free")
+                .two-in-one__card.promote-card 
+                    .promote-card__img
+                        svg(width="80" height="80")
+                            use(xlink:href="/assets/icons/sprite.svg#pen")
+                    h3.promote-card__title Выбирайте цвет и рисуйте карандашом
+                .two-in-one__card.promote-card 
+                    .promote-card__img
+                        svg(width="80" height="80")
+                            use(xlink:href="/assets/icons/sprite.svg#fullscreen")
+                    h3.promote-card__title Используйте стрелку, круг или квадрат для выделения
+                .two-in-one__card.promote-card 
+                    .promote-card__img
+                        svg(width="80" height="80")
+                            use(xlink:href="/assets/icons/sprite.svg#chat")
+                    h3.promote-card__title Оставляйте комментарии
+                .two-in-one__card.promote-card 
+                    .promote-card__img
+                        svg(width="80" height="80")
+                            use(xlink:href="/assets/icons/sprite.svg#raindrop")
+                    h3.promote-card__title Размывайте необходимую область
+            a(href="").two-in-one__download Скачать беслатно
         

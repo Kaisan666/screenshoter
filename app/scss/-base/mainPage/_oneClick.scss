@@ -55,8 +55,6 @@
     line-height: 200%;
     color: $mainGray;
   }
-  &__download {
-  }
   &__annotation {
     width: max-content;
     position: absolute;
@@ -72,6 +70,7 @@
 
   @include table {
     margin-top: 88px;
+    margin-bottom: 208px;
     &__content {
       &::before {
         top: -350px;
@@ -123,6 +122,7 @@
   }
   @include mobile {
     margin-top: 50px;
+    margin-bottom: 60px;
     &__content {
       flex-direction: column-reverse;
       gap: 126px;

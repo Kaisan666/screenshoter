@@ -1,5 +1,8 @@
 /* ================================ Fonts ================================ */
 @import './_styles/*.scss';
+html{
+  scroll-behavior: smooth;
+}
 body {
   display: flex;
   flex-direction: column;
