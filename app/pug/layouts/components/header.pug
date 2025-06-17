@@ -1,21 +1,21 @@
 mixin header
     header.header 
-        .header__inner 
+        .header__inner.container 
             .header__logo
                 a(href="")
-                    svg()
-                        use() 
+                    svg(width="250" height="39")
+                        use(xlink:href="/assets/icons/sprite.svg#logo") 
             .header__right 
                 nav.header__nav
                     ul.header__nav-list
+                        li.header__nav-item 
+                            a(href="").header__nav-link Функции
                         li.header__nav-item
-                            a(href="").header__nav-link 
+                            a(href="").header__nav-link Преимущества
                         li.header__nav-item
-                            a(href="").header__nav-link 
+                            a(href="").header__nav-link Как использовать
                         li.header__nav-item
-                            a(href="").header__nav-link 
-                        li.header__nav-item
-                            a(href="").header__nav-link 
+                            a(href="").header__nav-link Частые вопросы
                 select(name="").header__lang
-                    option(value="RU")  
-                    option(value="ENG")  
+                    option(value="RU") RU 
+                    option(value="ENG") ENG

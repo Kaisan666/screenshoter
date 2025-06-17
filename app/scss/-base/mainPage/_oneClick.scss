@@ -1,0 +1,16 @@
+.one-click{
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        gap: 70px;
+    }
+    &__left{
+        flex: 1 1 550px;
+    }
+    &__right{
+        flex: 1 1 848px;
+        transform: translateX(75px);
+    }
+    margin-top: 163px;
+
+}

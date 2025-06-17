@@ -1,0 +1,32 @@
+.header {
+    padding-top: 49px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__right {
+        display: flex;
+        gap: 60px;
+        align-items: center;
+    }
+
+    &__nav {
+        &-list {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+
+        &-link {
+            color: $mainGray;
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+    &__lang{
+        font-weight: 500;
+font-size: 16px;
+    }
+}
