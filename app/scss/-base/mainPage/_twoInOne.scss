@@ -9,12 +9,14 @@
       font-weight: 700;
       font-size: 36px;
     }
+
     &-description {
       flex: 0 1 571px;
       font-size: 18px;
       line-height: 200%;
     }
   }
+
   &__functions {
 
     &-content {
@@ -29,6 +31,7 @@
       padding: 50px 60px 60px;
     }
   }
+
   &__benefit {
 
     &-card {
@@ -72,8 +75,10 @@
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       background-color: $violet;
+      box-shadow: 0 26px 48px -23px $violet;
       transition: all 0.3s ease-in-out;
     }
+
     &:hover &__title {
       color: $white;
       transition: all 0.3s ease-in-out;
@@ -86,20 +91,24 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+
   &__info {
     flex: 0 1 470px;
     display: flex;
     flex-direction: column;
     gap: 40px;
+
     &-title {
       font-weight: 700;
       font-size: 36px;
     }
+
     &-description {
       font-size: 18px;
       line-height: 180%;
     }
   }
+
   &__annotation {
     position: absolute;
     max-width: 461px;
@@ -110,41 +119,69 @@
   }
 
   &:nth-child(1) {
-    &::after {
-      content: ' ';
-      width: 300px;
-      height: 300px;
-      background-color: red;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
     &::before {
       content: url('/assets/images/twoInOne/recordDonut.png');
       position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 2;
+      top: -245px;
+      left: -10vw;
+      z-index: -2;
     }
-  }
-  &:nth-child(2) {
+
     &::after {
-      content: ' ';
-      width: 300px;
-      height: 300px;
-      background-color: red;
+      content: " ";
+      width: 75%;
+      max-width: 903px;
+      height: 140%;
+      max-height: 650px;
+      background: linear-gradient(90deg, $rainbowGradient);
+      z-index: -1;
       position: absolute;
-      top: 0;
-      right: 0;
+      top: -10vw;
+      top: 50%;
+      left: -20%;
+      transform: translateY(-50%);
+      backdrop-filter: blur(40px);
     }
-    &::before {
-      content: url('/assets/images/twoInOne/oneClickCube.png');
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: 2;
+
+    .info-block {
+      &__img {
+        position: relative;
+
+
+
+
+      }
+
     }
+
   }
+
+  &:nth-child(2) {
+    // .pink-form {
+    //   position: absolute;
+    //   top: -66%;
+    //   right: -44%;
+    //   width: 90%;
+    //   height: 255%;
+    //   max-width: 1256px;
+    //   max-height: 920px;
+    //   z-index: -1;
+    //   img{
+    //     width: 100%;
+    //     height: 100%;
+    //   }
+    //   &::before {
+    //   content: url('/assets/images/twoInOne/oneClickCube.png');
+    //   position: absolute;
+    //   top: -10%;
+    //   right: 0;
+    //   z-index: -2;
+    // }
+    // }
+
+    
+  }
+
   &:nth-child(3) {
     &::after {
       content: ' ';
@@ -155,6 +192,7 @@
       top: 0;
       right: 0;
     }
+
     &::before {
       content: url('/assets/images/twoInOne/instantLink.png');
       position: absolute;
@@ -163,6 +201,7 @@
       z-index: 2;
     }
   }
+
   &:nth-child(4) {
     &::after {
       content: ' ';
@@ -173,6 +212,7 @@
       top: 0;
       right: 0;
     }
+
     &::before {
       content: url('/assets/images/twoInOne/editorDonut.png');
       position: absolute;

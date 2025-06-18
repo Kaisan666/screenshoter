@@ -45,6 +45,9 @@ border-radius: 5px;
   &--violet{
     background: linear-gradient(to right, $gradient);
   }
+  &--black{
+    background: $mainBlack;
+  }
 
   @include table{
     padding: 13px 27px;
