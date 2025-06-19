@@ -37,7 +37,14 @@
         gap: clamp(20px, 4.9vw, 94px);
     }
 
-    .functions-card {
+    &__usage-cards{
+        display: flex;
+    }
+}
+
+
+
+.functions-card {
         display: flex;
         flex-direction: column;
         gap: 60px;
@@ -72,4 +79,9 @@
             color: $mainGray;
         }
     }
+
+
+.usage-card{
+    max-width: 460px;
+    flex: 1 1 auto;
 }
