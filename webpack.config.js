@@ -77,7 +77,7 @@ module.exports = {
   devServer: {
     open: '/',
     watchFiles: ['app/pug/**/*'],
-    host: 'local-ip',
+    host: 'localhost',
     port: 1200,
   },
   mode: mode,
