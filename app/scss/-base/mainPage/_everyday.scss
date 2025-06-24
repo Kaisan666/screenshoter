@@ -1,87 +1,197 @@
-.everyday {
-    padding-inline: 56px;
-    max-width: 1920px;
-    margin-inline: auto;
 
-    &__container {
-        backdrop-filter: blur(40px);
-        background: linear-gradient(to bottom, rgba(255, 89, 247, 0.342) 0%, rgba(175, 114, 255, 0.322) 19.79%, rgba(144, 233, 237, 0.04) 40.62%, rgba(92, 209, 104, 0.199) 61.98%, rgba(255, 238, 0, 0.158) 82.53%);
-        border-radius: 70px;
-        max-width: 1808px;
-        padding-block: 100px 61px;
-    
-        
-        display: flex;
-        flex-direction: column;
-        gap: 200px;
+.usage-card {
+  max-width: 460px;
+  flex: 1 1 460px;
+  // width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 460px;
+    width: 100%;
+    background-color: #fff;
+    max-height: 200px;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 16 / 9;
+  }
+  &__download {
+    border-radius: 10px;
+    box-shadow: 0 12px 56px 3px rgba(116, 33, 176, 0.48);
+  }
+  .accent-text {
+    font-weight: 500;
+  }
+  &__description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 180%;
+  }
+
+
+
+  @include table{
+
+    flex: 1 1 auto;
+    gap: 34px;
+
+    &__description{
+font-size: 14px;
+
+        &-space{
+            display: none;
+        }
     }
-    &__content{
-    }
-
-    &__functions-title {
-        font-weight: 700;
-        font-size: 36px;
-        max-width: 514px;
-
-    }
-
-    &__functions {
-        display: flex;
-        flex-direction: column;
-        gap: 100px;
-    }
-
-
-    &__functions-cards {
-        display: flex;
-        gap: clamp(20px, 4.9vw, 94px);
-    }
-
-    &__usage-cards{
-        display: flex;
-    }
+  }
 }
 
 
+.everyday {
+    margin-top: 100px;
+    max-width: 1920px;
+    padding-inline: 56px;
+  margin-inline: auto;
+
+  &__container {
+    backdrop-filter: blur(40px);
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 89, 247, 0.342) 0%,
+      rgba(175, 114, 255, 0.322) 19.79%,
+      rgba(144, 233, 237, 0.04) 40.62%,
+      rgba(92, 209, 104, 0.199) 61.98%,
+      rgba(255, 238, 0, 0.158) 82.53%
+    );
+    border-radius: 70px;
+    max-width: 1808px;
+    padding-block: 100px 61px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+  }
+  &__content {
+  }
+
+  &__functions-title {
+    font-weight: 700;
+    font-size: 36px;
+    max-width: 514px;
+  }
+
+  &__functions {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  &__functions-cards {
+    display: flex;
+    gap: clamp(20px, 4.9vw, 94px);
+  }
+
+  &__usage {
+    &-cards {
+      display: flex;
+    }
+    &-title {
+      font-weight: 700;
+      font-size: 36px;
+      margin-bottom: 100px;
+    }
+    &-cards {
+      display: flex;
+      gap: 30px;
+      justify-content: space-between;
+    }
+  }
+
+  @include table{
+    &__functions{
+        &-cards{
+            flex-direction: column;
+            padding-inline: 93px 26px;
+        }
+    }
+    &__usage{
+        &-cards{
+            flex-direction: column;
+            // padding-inline: 144px;
+            max-width: 442px;
+            margin-inline: auto;
+            gap: 60px;
+        }
+
+        &-title{
+            font-size: 20px;
+        }
+    }
+  }
+}
 
 .functions-card {
-        display: flex;
-        flex-direction: column;
-        gap: 60px;
-        &__img{
-            height: 120px;
-        }
-        &__header {
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
-        }
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  &__img {
+    height: 120px;
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
 
-        &__name {
-            display: flex;
-            gap: 50px;
-            align-items: center;
-        }
+  &__name {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    max-width: 56%;
+  }
 
-        &__title {
-            font-weight: 500;
-            font-size: 24px;
-        }
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+  }
 
-        &__number {
-            font-size: 36px;
-            font-weight: 700;
-        }
+  &__number {
+    font-size: 36px;
+    font-weight: 700;
+  }
 
-        &__description {
-            font-size: 18px;
-            line-height: 200%;
-            color: $mainGray;
-        }
+  &__description {
+    font-size: 18px;
+    line-height: 200%;
+    color: $mainGray;
+  }
+
+
+  @include table{
+    flex-direction: row;
+    gap: 79px;
+    &__description{
+        font-size: 14px;
     }
-
-
-.usage-card{
-    max-width: 460px;
-    flex: 1 1 auto;
+    &__img {
+    height: 100px;
+    }
+    &__name{
+        gap: 27px;
+    }
+    &__number{
+        font-size: 20px;
+    }
+    &__title{
+        font-size: 18px;
+    }
+  }
 }
+

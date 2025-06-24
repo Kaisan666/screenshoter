@@ -1,0 +1,264 @@
+.info-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  &__info {
+    flex: 0 1 470px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    &-title {
+      font-weight: 700;
+      font-size: 36px;
+    }
+
+    &-description {
+      font-size: 18px;
+      line-height: 180%;
+    }
+  }
+
+  &__annotation {
+    position: absolute;
+    max-width: 461px;
+  }
+
+  &--reversed {
+    flex-direction: row-reverse;
+  }
+
+  &:nth-child(1) {
+    &::before {
+      content: url('/assets/images/twoInOne/recordDonut.png');
+      position: absolute;
+      top: -245px;
+      left: -10vw;
+      z-index: -2;
+    }
+
+    &::after {
+      content: ' ';
+      width: 75%;
+      max-width: 903px;
+      height: 140%;
+      max-height: 650px;
+      background: linear-gradient(90deg, $rainbowGradient);
+      z-index: -1;
+      position: absolute;
+      top: -10vw;
+      top: 50%;
+      left: -20%;
+      transform: translateY(-50%);
+      backdrop-filter: blur(40px);
+    }
+
+    .info-block {
+      &__img {
+        position: relative;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    .pink-form {
+      position: absolute;
+      background: linear-gradient(144deg, #7421b02a 0%, #d08eff2a 45.99%);
+      top: -78%;
+      right: -47%;
+      width: 90%;
+      height: 255%;
+      max-width: 1256px;
+      max-height: 920px;
+      z-index: -1;
+      backdrop-filter: blur(8px);
+      mask-image: url('/assets/images/twoInOne/pinkForm.png');
+      mask-repeat: no-repeat;
+      mask-size: cover;
+    }
+
+    &::before {
+      content: url('/assets/images/twoInOne/oneClickCube.png');
+      position: absolute;
+      top: -10%;
+      right: 0;
+      z-index: -2;
+    }
+  }
+
+  &:nth-child(3) {
+    &::after {
+      content: ' ';
+      width: 300px;
+      height: 300px;
+      background-color: red;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    &::before {
+      content: url('/assets/images/twoInOne/instantLink.png');
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+    }
+  }
+
+  &:nth-child(4) {
+    &::after {
+      content: ' ';
+      width: 75%;
+      max-width: 903px;
+      height: 140%;
+      max-height: 650px;
+      background: linear-gradient(144deg, rgba(116, 33, 176, 0.2) 20.65%, rgba(208, 142, 255, 0.2) 100%);
+      z-index: -1;
+      position: absolute;
+      top: -10vw;
+      top: 50%;
+      right: -20%;
+      transform: translateY(-50%);
+      backdrop-filter: blur(40px);
+      border-radius: 70px;
+    }
+
+    &::before {
+      content: url('/assets/images/twoInOne/editorDonut.png');
+      position: absolute;
+      top: -49%;
+      right: 22px;
+      z-index: -2;
+    }
+  }
+
+  @include table {
+    flex-direction: column;
+
+    &__info {
+      flex: 1 1 auto;
+      flex-direction: row;
+      gap: clamp(20px, 14.71vw, 113px);
+
+      &-title {
+        font-size: 20px;
+      }
+
+      &-description {
+        font-size: 14px;
+        flex: 1 1 442px;
+      }
+    }
+
+    &:nth-child(1) {
+      &::before {
+        content: url('/assets/images/twoInOne/recordDonut.png');
+        position: absolute;
+        top: -245px;
+        left: -10vw;
+        z-index: -2;
+      }
+
+      &::after {
+        content: ' ';
+        width: 75%;
+        max-width: 903px;
+        height: 140%;
+        max-height: 650px;
+        background: linear-gradient(90deg, $rainbowGradient);
+        z-index: -1;
+        position: absolute;
+        top: -10vw;
+        top: 50%;
+        left: -20%;
+        transform: translateY(-50%);
+        backdrop-filter: blur(40px);
+      }
+
+      .info-block {
+        &__img {
+          position: relative;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .pink-form {
+        top: -39%;
+        right: -8%;
+        width: 90%;
+        max-height: 638px;
+        max-width: none;
+      }
+
+      &::before {
+        top: -32%;
+        right: 31%;
+      }
+    }
+
+    &:nth-child(3) {
+      &::after {
+        content: ' ';
+        width: 300px;
+        height: 300px;
+        background-color: red;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      &::before {
+        content: url('/assets/images/twoInOne/instantLink.png');
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+      }
+    }
+
+    &:nth-child(4) {
+      &::after {
+        content: ' ';
+        width: 75%;
+        max-width: 903px;
+        height: 140%;
+        max-height: 650px;
+        background: linear-gradient(144deg, rgba(116, 33, 176, 0.2) 20.65%, rgba(208, 142, 255, 0.2) 100%);
+        z-index: -1;
+        position: absolute;
+        top: -10vw;
+        top: 50%;
+        right: -20%;
+        transform: translateY(-50%);
+        backdrop-filter: blur(40px);
+        border-radius: 70px;
+      }
+
+      &::before {
+        content: url('/assets/images/twoInOne/editorDonut.png');
+        position: absolute;
+        top: -49%;
+        right: 22px;
+        z-index: -2;
+      }
+    }
+  }
+
+
+
+  @include mobile{
+    &__info{
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+
+      &-description{
+        flex: 1 1 auto;
+      }
+    }
+  }
+}

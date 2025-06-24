@@ -15,9 +15,9 @@ body {
 }
 
 .container {
-  max-width: calc(1447px + 45px * 2);
+  max-width: calc(1447px + 20px * 2);
   margin: 0 auto;
-  padding: 0 45px;
+  padding: 0 20px;
   @include mobile {
     max-width: calc(1440px + 15px * 2);
     padding: 0 15px;
