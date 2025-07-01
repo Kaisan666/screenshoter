@@ -1,0 +1,107 @@
+.benefits {
+  margin-top: 334px;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+  }
+  &__header {
+    display: flex;
+    gap: clamp(30px, 5vw, 96px);
+    position: relative;
+
+    &-title {
+      flex: 0 1 516px;
+      font-weight: 700;
+      font-size: 36px;
+    }
+
+    &-description {
+      flex: 0 1 521px;
+      font-size: 18px;
+      line-height: 200%;
+    }
+
+    &-annotation {
+      padding: 8px 23px;
+      position: absolute;
+      backdrop-filter: blur(21px);
+      max-width: 228;
+      top: -120px;
+      left: 10%;
+      z-index: 5;
+      color: $mainGray;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 100.99%;
+        left: 15%;
+        border: 12px solid transparent;
+        border-top: 18px solid rgba(196, 196, 196, 0.15);
+        backdrop-filter: blur(8px);
+      }
+    }
+    &-img {
+      position: absolute;
+      z-index: -1;
+      top: -145px;
+      left: 25%;
+    }
+    // &::after {
+    //     content: url('/assets/images/benefits/purpleThing.png');
+    //     position: absolute;
+    //     z-index: -1;
+    // }
+  }
+
+  &__card {
+    padding: 50px 45px;
+  }
+
+  @include table {
+    &__content {
+      gap: 60px;
+    }
+
+    &__header {
+      gap: 67px;
+      &-title {
+        flex: 0 1 287px;
+        font-size: 20px;
+      }
+      &-description {
+        flex: 0 1 324px;
+        font-size: 12px;
+      }
+      &-annotation {
+        font-size: 12px;
+      }
+    }
+  }
+  @include mobile {
+    &__content {
+      gap: 30px;
+    }
+
+    &__header {
+      flex-direction: column;
+      gap: 20px;
+
+      &-title {
+        flex: 1 1 auto;
+      }
+      &-description {
+        flex: 1 1 auto;
+      }
+      &-annotation {
+        top: -51%;
+        left: -1%;
+        padding: 12px 36px;
+      }
+      &-img {
+        top: -77%;
+        left: 37%;
+      }
+    }
+  }
+}

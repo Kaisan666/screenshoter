@@ -23,9 +23,6 @@
       margin-bottom: 390px;
     }
     &-content {
-      display: flex;
-      gap: 29px;
-      justify-content: space-between;
     }
 
     &-card {
@@ -72,12 +69,6 @@
         margin-top: 30px;
         margin-bottom: 202px;
       }
-      &-content {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 30px;
-      }
 
       &-card {
         padding: 60px;
@@ -109,14 +100,39 @@
       }
     }
     &__functions {
-      &-content {
-        display: flex;
-        flex-direction: column;
+
+    }
+
+    &__benefit{
+      &-cards{
+        align-items: normal;
       }
+    }
+    &__download{
+      align-self: center;
     }
 
     &__info-blocks {
-      gap: 130px;
+      gap: 80px;
     }
+  }
+}
+
+.cards-block {
+  display: flex;
+  gap: 29px;
+  justify-content: space-between;
+
+  @include table{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 30px;
+  }
+
+  @include mobile{
+    display: flex;
+        flex-direction: column;
+        gap: 20px;
   }
 }

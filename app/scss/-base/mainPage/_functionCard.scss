@@ -4,6 +4,7 @@
   gap: 60px;
   &__img {
     height: 120px;
+    display: flex;
   }
   &__main {
     display: flex;
@@ -52,6 +53,23 @@
     }
     &__title{
         font-size: 18px;
+    }
+  }
+  @include mobile{
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    &__main{
+      align-items: center;
+      gap: 20px;
+    }
+    &__name{
+      gap: 30px;
+      max-width: none;
+    }
+    &__img{
+      max-height: 90px;
+      max-width: 90px;
     }
   }
 }

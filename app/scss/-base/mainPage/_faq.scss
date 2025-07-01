@@ -1,0 +1,79 @@
+.faq {
+  &__card {
+    padding: 50px;
+    background-color: rgba(196, 196, 196, 0.1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    &-content {
+      display: flex;
+      flex-direction: column;
+      max-width: 584px;
+      gap: 20px;
+    }
+    &-open {
+      cursor: pointer;
+
+      input {
+        display: none;
+      }
+      svg{
+        transform: rotate(45deg);
+        transition: transform 0.3s ease-in-out;
+
+        @media (hover : hover) and (pointer: fine) {
+          &:hover{
+          }
+        }
+      }
+    }
+
+    &-number {
+      font-weight: 700;
+      font-size: 36px;
+    }
+    &-title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 160%;
+    }
+
+    &:has(input:checked) {
+      .faq {
+        &__card {
+          &-open{
+            svg{
+              transform: rotate(0deg);
+              transition: transform 0.3s ease-in-out;
+            }
+          }
+          &-container {
+            grid-template-rows: 1fr;
+            &-animation {
+              &-wrapper {
+                transform: translateY(0);
+                visibility: visible;
+                transition: all 0.3s ease-in-out;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-container {
+      display: grid;
+      grid-template-rows: 0fr;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+      &-animation {
+        min-height: 0;
+        &-wrapper {
+          transform: translateY(-100%);
+          visibility: hidden;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}
