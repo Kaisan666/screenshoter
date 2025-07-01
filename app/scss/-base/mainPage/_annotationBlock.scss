@@ -1,0 +1,24 @@
+.annotation-block{
+    margin-block: 200px 229px;
+
+    &__container{
+        display: flex;
+        gap: 224px;
+    }
+    &__img{
+        flex: 1 1 auto;
+        display: flex;
+        justify-content : end;
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        max-width: 705px;
+    }
+    &__btn{
+        align-self: flex-start;
+    }
+
+}

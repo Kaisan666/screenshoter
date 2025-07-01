@@ -1,30 +1,63 @@
 .faq {
+  //  background:
+  //   radial-gradient(circle at 90% 30%, rgba(255, 255, 177, 0.2) 0%, transparent 60%),
+  //   radial-gradient(circle at 30% 70%, rgba(220, 141, 220, 0.1) 0%, transparent 60%),
+  //   linear-gradient(140deg, rgba(192, 169, 240, 0.05) 0%, rgba(205, 249, 232, 0.05) 100%);
+  margin-top: 182px;
+  background: 
+    radial-gradient(48.24% 101.15% at 90.75% 40.15%, #fffdb11c 0%, #fee4bf1c 34.46%, #f0bdd01c 69.5%, rgba(255, 129, 38, 0) 100%),
+    linear-gradient(151deg, rgba(192, 169, 240, 0.05) 0%, rgba(192, 169, 240, 0.05) 45.64%, rgba(192, 169, 240, 0.05) 100%),
+    linear-gradient(198deg, rgba(192, 169, 240, 0.05) 0%, rgba(192, 169, 240, 0.05) 46.19%, rgba(192, 169, 240, 0.05) 100%),
+    linear-gradient(156deg, rgba(205, 249, 232, 0.05) 0%, rgba(205, 249, 232, 0.05) 100%),
+    radial-gradient(65.51% 30.74% at 45.56% 44.65%, #cbadeb1c 0%, rgba(194, 166, 241, 0) 100%),
+    radial-gradient(63.36% 43.91% at 35.87% 100%, #dc8ddc1c 0%, rgba(220, 141, 220, 0) 100%),
+    radial-gradient(76.99% 38.01% at 44.25% 86.96%, #dc8ddc1c 0%, rgba(220, 141, 220, 0) 100%),
+    linear-gradient(146deg, rgba(235, 243, 208, 0.05) 0%, rgba(235, 243, 208, 0.05) 100%);
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-block: 100px 173px;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
   &__card {
     padding: 50px;
     background-color: rgba(196, 196, 196, 0.1);
     backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
     display: flex;
     justify-content: space-between;
+    transition: all 0.3s ease-in-out;
+    align-items: center;
+    cursor: pointer;
+
+    input {
+      display: none;
+    }
+
     &-content {
-      display: flex;
-      flex-direction: column;
       max-width: 584px;
       gap: 20px;
     }
-    &-open {
-      cursor: pointer;
 
-      input {
-        display: none;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        box-shadow: 0px 10px 16px 0px rgba(34, 60, 80, 0.35);
+        transition: all 0.3s ease-in-out;
       }
-      svg{
+    }
+
+    &-open {
+      svg {
         transform: rotate(45deg);
         transition: transform 0.3s ease-in-out;
-
-        @media (hover : hover) and (pointer: fine) {
-          &:hover{
-          }
-        }
       }
     }
 
@@ -32,6 +65,7 @@
       font-weight: 700;
       font-size: 36px;
     }
+
     &-title {
       font-weight: 500;
       font-size: 24px;
@@ -41,8 +75,8 @@
     &:has(input:checked) {
       .faq {
         &__card {
-          &-open{
-            svg{
+          &-open {
+            svg {
               transform: rotate(0deg);
               transition: transform 0.3s ease-in-out;
             }
@@ -73,6 +107,27 @@
           visibility: hidden;
           transition: all 0.3s ease-in-out;
         }
+      }
+    }
+  }
+
+  @include mobile {
+    &__card {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+      &-number {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      &-open {
+        grid-column: 2;
+        grid-row: 1;
+      }
+
+      &-container {
+        grid-column: span 2;
+        grid-row: 2;
       }
     }
   }
