@@ -4,8 +4,7 @@
   //   radial-gradient(circle at 30% 70%, rgba(220, 141, 220, 0.1) 0%, transparent 60%),
   //   linear-gradient(140deg, rgba(192, 169, 240, 0.05) 0%, rgba(205, 249, 232, 0.05) 100%);
   margin-top: 182px;
-  background: 
-    radial-gradient(48.24% 101.15% at 90.75% 40.15%, #fffdb11c 0%, #fee4bf1c 34.46%, #f0bdd01c 69.5%, rgba(255, 129, 38, 0) 100%),
+  background: radial-gradient(48.24% 101.15% at 90.75% 40.15%, #fffdb11c 0%, #fee4bf1c 34.46%, #f0bdd01c 69.5%, rgba(255, 129, 38, 0) 100%),
     linear-gradient(151deg, rgba(192, 169, 240, 0.05) 0%, rgba(192, 169, 240, 0.05) 45.64%, rgba(192, 169, 240, 0.05) 100%),
     linear-gradient(198deg, rgba(192, 169, 240, 0.05) 0%, rgba(192, 169, 240, 0.05) 46.19%, rgba(192, 169, 240, 0.05) 100%),
     linear-gradient(156deg, rgba(205, 249, 232, 0.05) 0%, rgba(205, 249, 232, 0.05) 100%),
@@ -18,6 +17,11 @@
     flex-direction: column;
     gap: 40px;
     padding-block: 100px 173px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    text-align: center;
   }
 
   &__cards {
@@ -111,7 +115,14 @@
     }
   }
 
+  @include table{
+    &__title{
+      font-size: 24px;
+    }
+  }
+
   @include mobile {
+    
     &__card {
       display: grid;
       grid-template-columns: auto auto;

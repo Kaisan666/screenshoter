@@ -1,22 +1,21 @@
 mixin footer
     footer.footer 
-        .footer__inner 
-            .footer__logo 
-                a(href="").footer__logo-link
-                    svg()
-                        use()
-            .footer__pages 
-                ul.footer__pages-list 
-                    a.footer__pages-title 
-                    li.footer__pages-item 
-                        a.footer__pages-link 
-                    li.footer__pages-item 
-                        a.footer__pages-link 
-                    li.footer__pages-item 
-                        a.footer__pages-link 
-                    li.footer__pages-item 
-                        a.footer__pages-link 
-                ul.footer__pages-list 
-                    a.footer__pages-title 
-                ul.footer__pages-list 
-                    a.footer__pages-title
+        .container
+            .footer__inner 
+                .footer__logo 
+                    a(href="/").footer__logo-link
+                        svg(width="250" height="39")
+                            use(xlink:href="/assets/icons/sprite.svg#logo") 
+                nav.footer__pages
+                    ul.footer__pages-list 
+                        a(href="#").footer__pages-title Продукт
+                        li.footer__pages-item 
+                            a(href="#").footer__pages-link Функции
+                        li.footer__pages-item 
+                            a(href="#").footer__pages-link Преимущества
+                        li.footer__pages-item 
+                            a(href="#").footer__pages-link Как использовать
+                    ul.footer__pages-list 
+                        a(href="#").footer__pages-title Обратная связь
+                    ul.footer__pages-list 
+                        a(href="#").footer__pages-title Политика конфиденциальности

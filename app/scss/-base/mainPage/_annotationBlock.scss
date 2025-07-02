@@ -1,24 +1,97 @@
-.annotation-block{
-    margin-block: 200px 229px;
+.annotation-block {
+  margin-block: 200px 229px;
 
-    &__container{
-        display: flex;
-        gap: 224px;
+  &__container {
+    display: flex;
+    gap: 224px;
+  }
+  &__img {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    position: relative;
+    &::before {
+      content: '';
+      max-width: 825px;
+      width: 75vw;
+      height: 210px;
+      background: radial-gradient(48.24% 101.15% at 90.75% 40.15%, #fffcb18c 0%, #fee4bf8c 34.46%, #f0bdd08c 69.5%, rgba(255, 129, 38, 0) 100%),
+        linear-gradient(151deg, rgba(192, 169, 240, 0.05) 0%, rgba(192, 169, 240, 0.05) 45.64%, rgba(192, 169, 240, 0.05) 100%),
+        linear-gradient(198deg, rgba(192, 169, 240, 0.05) 0%, rgba(192, 169, 240, 0.05) 46.19%, rgba(192, 169, 240, 0.05) 100%),
+        linear-gradient(156deg, rgba(205, 249, 232, 0.05) 0%, rgba(205, 249, 232, 0.05) 100%),
+        radial-gradient(65.51% 30.74% at 45.56% 44.65%, #cbadeb8c 0%, rgba(194, 166, 241, 0) 100%),
+        radial-gradient(63.36% 43.91% at 35.87% 100%, #dc8ddc8c 0%, rgba(220, 141, 220, 0) 100%),
+        radial-gradient(76.99% 38.01% at 44.25% 86.96%, #dc8ddc8c 0%, rgba(220, 141, 220, 0) 100%),
+        linear-gradient(146deg, rgba(235, 243, 208, 0.05) 0%, rgba(235, 243, 208, 0.05) 100%);
+      position: absolute;
+      backdrop-filter: blur(8px);
+      right: -75px;
     }
+
+    svg {
+      transform: translateY(40px);
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 705px;
+  }
+  &__btn {
+    align-self: flex-start;
+  }
+  &__text {
+    font-size: 36px;
+    line-height: 140%;
+  }
+
+  @include table {
+  margin-block: 283px 100px;
+    &__container {
+      flex-direction: column;
+      align-items: center;
+      gap: 75px;
+    }
+    &__img {
+      svg {
+        transform: translateY(20px) translateX(189px);
+      }
+
+      &::before {
+        max-width: none;
+        width: 1000px;
+        right: -300px;
+      }
+    }
+
+    &__info {
+      gap: 40px;
+      align-items: center;
+    }
+    &__btn {
+      align-self: auto;
+    }
+    &__text {
+      font-size: 24px;
+    }
+  }
+
+  @include mobile {
+    margin-block: 302px 60px;
+    &__info {
+      gap: 60px;
+    }
+    &__text {
+      font-size: 18px;
+    }
+
     &__img{
-        flex: 1 1 auto;
-        display: flex;
-        justify-content : end;
+      svg{
+        transform: translateY(20px) translateX(30px);
+      }
     }
-
-    &__info{
-        display: flex;
-        flex-direction: column;
-        gap: 60px;
-        max-width: 705px;
-    }
-    &__btn{
-        align-self: flex-start;
-    }
-
+  }
 }
