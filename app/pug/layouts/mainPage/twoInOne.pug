@@ -57,19 +57,20 @@ mixin twoInOne
                             |  Просто нажмите две кнопки мыши или настройте горячую кнопку на любую удобную клавишу 
                 
                 article.two-in-one__instant-link.info-block(id="instantLink")
-                    
+                    .form
                     .info-block__img
                         .info-block__img-wrapper
                             img(src="/assets/images/twoInOne/gif.png", width="700" height="400" alt="")
+                            .info-block__annotation.blured
+                                .info-block__annotation-text
+                                    b Файлы хранятся в течение 1 года 
+                                    | с момента создания. Можно их удалять самостоятельно. В истории программы доступны последние 5 скриншотов
                     .info-block__info
                         h2.info-block__info-title Мгновенная ссылка
                         .info-block__info-description Мгновенное получение ссылки на снимок
                             | или видео. Вы только нажали Enter, а ссылка уже
                             | в буфере обмена. Перейдя по ссылке, можно будет посмотреть ваш снимок или записанное видео
-                    .info-block__annotation.blured
-                        .info-block__annotation-text
-                            b Файлы хранятся в течение 1 года
-                            | с момента создания. Можно их удалять самостоятельно. В истории программы доступны последние 5 скриншотов
+                    
 
                 article.two-in-one__editor.info-block.info-block--reversed(id="editor")
                     .info-block__img
